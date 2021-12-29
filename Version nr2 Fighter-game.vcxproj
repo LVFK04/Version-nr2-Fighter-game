@@ -139,11 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FigtherPlayer.cpp" />
+    <ClCompile Include="Fighter.cpp" />
+    <ClCompile Include="FighterGame.cpp" />
     <ClCompile Include="Game.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="FighterPlayer.h" />
+    <ClInclude Include="Fighter.h" />
+    <ClInclude Include="FighterGame.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

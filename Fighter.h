@@ -1,16 +1,21 @@
 #pragma once
-#include <iostream>
 #include<string>
+#include <iostream>
 
-std::string actionChecker();
-int numChecker();
-void excIncreaser();
-unsigned short statChecker();
+//std::string actionChecker();
+//int numChecker();
+//void excIncreaser();
+//unsigned short statChecker();
 
 class Fighter {
 public:
 	Fighter();
-	~Fighter();
+	void startOfTurn();
+
+	void attack(Fighter* tar);
+	void defend();
+	void rest();
+	void shop();
 
 private: 
 	std::string name;
@@ -23,10 +28,7 @@ private:
 
 public:
 
-	void startOfTurn();
-	void attack(Fighter* tar);
-	void defend();
-	void rest();
+	static int numOfFighters;
 
 	unsigned int getSpeed() { return speed; }
 	unsigned int getDefece(){ return defencePower; }
@@ -40,7 +42,4 @@ public:
 	void gainStamina(unsigned int x) { stamina += x; }
 	void gainSpeed(unsigned int x) { speed += x; }
 
-	void printName() { std::cout << name; }
-	void printStam() { std::cout << stamina; }
-	void printHealth() { std::cout << health; }
 };
